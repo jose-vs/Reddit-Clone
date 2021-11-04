@@ -1,16 +1,18 @@
-import { __prod__ } from "./constants";
 import { Post } from "./entities/Post";
-import path from 'path'
+import { __prod__ } from "./constants";
 import { MikroORM } from "@mikro-orm/core";
+import path from "path";
+import { User } from "./entities/User";
+
 require("dotenv").config();
 
 export default {
   migrations: {
-    path: path.join(__dirname, "./migrations"), // path to the folder with migrations
-    pattern: /^[\w-]+\d+\.[tj]s$/, // regex pattern for the migration files
+    path: path.join(__dirname, "./migrations"),
+    pattern: /^[\w-]+\d+\.[tj]s$/,
   },
-  entities: [Post],
-  password: process.env.DB_PASSWORD ,
+  entities: [Post, User],
+  password: process.env.DB_PASSWORD,
   dbName: "lireddit",
   type: "postgresql",
   debug: !__prod__,
