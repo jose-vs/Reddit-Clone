@@ -24,6 +24,7 @@
   "homepage": "https://github.com/jose-vs/Reddit-Clone#readme",
   "devDependencies": {
     "@types/connect-redis": "^0.0.14",
+    "@types/cors": "^2.8.12",
     "@types/express": "^4.17.7",
     "@types/express-session": "^1.17.0",
     "@types/node": "^14.0.27",
@@ -41,6 +42,7 @@
     "argon2": "^0.26.2",
     "class-validator": "^0.13.1",
     "connect-redis": "^5.0.0",
+    "cors": "^2.8.5",
     "dotenv": "^10.0.0",
     "express": "^4.17.1",
     "express-session": "^1.17.1",
